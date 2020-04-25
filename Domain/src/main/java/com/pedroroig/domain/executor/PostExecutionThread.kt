@@ -2,6 +2,6 @@ package com.pedroroig.domain.executor
 
 import io.reactivex.Scheduler
 
-interface PostExecutorThread {
+interface PostExecutionThread {
     val scheduler: Scheduler
 }
