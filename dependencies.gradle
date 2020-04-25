@@ -1,0 +1,10 @@
+ext {
+    // Android
+    kotlinVersion = '1.3.71'
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 29
+    androidCompileSdkVersion = 29
+
+    // Libraries
+    appCompatVersion = '1.1.0'
+}
