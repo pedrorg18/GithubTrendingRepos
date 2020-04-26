@@ -1,4 +1,4 @@
-package com.pedroroig.domain.interactor.bookmarked
+package com.pedroroig.domain.interactor.bookmark
 
 import com.pedroroig.domain.executor.PostExecutionThread
 import com.pedroroig.domain.interactor.ObservableUseCase
@@ -12,7 +12,7 @@ class GetBookmarkedProjects @Inject constructor(
     postExecutionThread: PostExecutionThread
 ) : ObservableUseCase<List<Project>, Nothing?>(postExecutionThread) {
 
-    override fun buildUseCaseObservable(params: Nothing?): Observable<List<Project>> =
+    public override fun buildUseCaseObservable(params: Nothing?): Observable<List<Project>> =
         projectsRepository.getBookmarkedProjects()
 
 }
