@@ -7,6 +7,7 @@ dependencies {
     implementation domainDependencies.javaxAnnotation
     implementation domainDependencies.javaxInject
     implementation domainDependencies.rxJava
+    implementation domainDependencies.kotlinStdLib
 
     testImplementation domainTestDependencies.junit
     testImplementation domainTestDependencies.mockito
