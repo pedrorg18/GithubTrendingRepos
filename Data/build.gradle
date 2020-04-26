@@ -1,8 +1,11 @@
+apply plugin: 'java-library'
 apply plugin: 'kotlin'
 
 dependencies {
-    def domainDependencies = rootProject.ext.domainDependencies
-    def domainTestDependencies = rootProject.ext.domainTestDependencies
+    def domainDependencies = rootProject.ext.dataDependencies
+    def domainTestDependencies = rootProject.ext.dataTestDependencies
+
+    compile project(':Domain')
 
     implementation domainDependencies.javaxAnnotation
     implementation domainDependencies.javaxInject
@@ -10,6 +13,7 @@ dependencies {
     implementation domainDependencies.kotlinStdLib
 
     testImplementation domainTestDependencies.junit
+    testImplementation domainTestDependencies.kotlinJUnit
     testImplementation domainTestDependencies.mockito
     testImplementation domainTestDependencies.assertj
 }
