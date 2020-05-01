@@ -13,5 +13,5 @@ open class ProjectsDataStoreFactory @Inject constructor(
         else projectsRemoteDataStore
     }
 
-    open fun getCacheDataStore() = projectsCacheDataStore
+    open fun getCacheDataStore(): ProjectsDataStore = projectsCacheDataStore
 }

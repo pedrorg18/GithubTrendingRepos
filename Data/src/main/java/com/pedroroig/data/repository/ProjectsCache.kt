@@ -1,7 +1,6 @@
 package com.pedroroig.data.repository
 
 import com.pedroroig.data.model.ProjectEntity
-import com.pedroroig.domain.model.Project
 import io.reactivex.Completable
 import io.reactivex.Observable
 import io.reactivex.Single
