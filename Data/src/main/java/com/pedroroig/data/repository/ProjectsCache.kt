@@ -10,7 +10,7 @@ interface ProjectsCache {
 
     fun clearProjects(): Completable
 
-    fun saveProjects(projects: List<Project>): Completable
+    fun saveProjects(projects: List<ProjectEntity>): Completable
 
     fun getProjects(): Observable<List<ProjectEntity>>
 
