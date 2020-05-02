@@ -19,9 +19,9 @@ open class ProjectsCacheDataStore @Inject constructor(
 
     override fun saveProjects(projects: List<ProjectEntity>): Completable =
         projectsCache.saveProjects(projects)
-            .andThen {
+            .andThen(
                 projectsCache.setLastCacheTime(System.currentTimeMillis())
-            }
+            )
 
     override fun getBookmarkedProjects(): Observable<List<ProjectEntity>> =
         projectsCache.getBookmarkedProjects()
