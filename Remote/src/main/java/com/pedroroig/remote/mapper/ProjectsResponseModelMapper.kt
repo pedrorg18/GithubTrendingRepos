@@ -3,7 +3,7 @@ package com.pedroroig.remote.mapper
 import com.pedroroig.data.model.ProjectEntity
 import com.pedroroig.remote.model.ProjectModel
 
-class ProjectsResponseModelMapper : ModelMapper<ProjectModel, ProjectEntity> {
+open class ProjectsResponseModelMapper : ModelMapper<ProjectModel, ProjectEntity> {
 
     override fun mapFromModel(model: ProjectModel): ProjectEntity =
         with(model) {
