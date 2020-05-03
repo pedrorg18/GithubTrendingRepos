@@ -12,7 +12,7 @@ interface GithubTrendingService {
         @Query("q") query: String,
         @Query("sort") sort: String,
         @Query("order") order: String
-    ): Observable<ProjectsResponseModel.ProjectsResponseModel>
+    ): Observable<ProjectsResponseModel>
 
 
 }
