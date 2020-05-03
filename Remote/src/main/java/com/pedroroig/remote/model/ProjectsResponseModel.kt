@@ -1,6 +1,6 @@
 package com.pedroroig.remote.model
 
-class ProjectResponseModel {
+class ProjectsResponseModel {
 
     class ProjectsResponseModel(val items: List<ProjectModel>)
 
