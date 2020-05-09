@@ -5,7 +5,7 @@ dependencies {
     def domainDependencies = rootProject.ext.dataDependencies
     def domainTestDependencies = rootProject.ext.dataTestDependencies
 
-    compile project(':Domain')
+    implementation project(':Domain')
 
     implementation domainDependencies.javaxAnnotation
     implementation domainDependencies.javaxInject
