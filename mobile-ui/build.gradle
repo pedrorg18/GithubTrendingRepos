@@ -61,6 +61,7 @@ dependencies {
     implementation presentationDependencies.archExtensions
     implementation "android.arch.persistence.room:rxjava2:1.1.1"
     kapt presentationDependencies.archCompiler
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
     testImplementation mobileUiTestDependencies.kotlinJUnit
 
