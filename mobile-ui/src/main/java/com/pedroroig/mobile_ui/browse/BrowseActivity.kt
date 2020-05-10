@@ -1,9 +1,10 @@
-package com.pedroroig.mobile_ui
+package com.pedroroig.mobile_ui.browse
 
 import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.pedroroig.mobile_ui.R
 import kotlinx.android.synthetic.main.activity_browse.*
 
 class BrowseActivity : AppCompatActivity() {

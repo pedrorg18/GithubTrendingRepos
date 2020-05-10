@@ -1,7 +1,7 @@
 package com.pedroroig.mobile_ui.injection.module
 
 import com.pedroroig.domain.executor.PostExecutionThread
-import com.pedroroig.mobile_ui.BrowseActivity
+import com.pedroroig.mobile_ui.browse.BrowseActivity
 import com.pedroroig.mobile_ui.UiThread
 import dagger.Binds
 import dagger.Module
