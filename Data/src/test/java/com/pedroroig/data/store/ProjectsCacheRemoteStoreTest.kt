@@ -6,7 +6,7 @@ import com.nhaarman.mockito_kotlin.whenever
 import com.pedroroig.data.factory.makeProjectEntity
 import com.pedroroig.data.model.ProjectEntity
 import com.pedroroig.data.repository.ProjectsRemote
-import io.reactivex.Observable
+import io.reactivex.rxjava3.core.Observable
 import org.junit.Before
 import org.junit.Test
 

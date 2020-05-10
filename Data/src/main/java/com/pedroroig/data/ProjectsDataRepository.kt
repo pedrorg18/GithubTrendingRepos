@@ -5,9 +5,9 @@ import com.pedroroig.data.repository.ProjectsCache
 import com.pedroroig.data.store.ProjectsDataStoreFactory
 import com.pedroroig.domain.model.Project
 import com.pedroroig.domain.repository.ProjectsRepository
-import io.reactivex.Completable
-import io.reactivex.Observable
-import io.reactivex.functions.BiFunction
+import io.reactivex.rxjava3.core.Completable
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.functions.BiFunction
 import javax.inject.Inject
 
 class ProjectsDataRepository @Inject constructor(

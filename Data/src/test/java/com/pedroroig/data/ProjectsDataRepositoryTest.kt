@@ -9,9 +9,9 @@ import com.pedroroig.data.model.ProjectEntity
 import com.pedroroig.data.repository.ProjectsCache
 import com.pedroroig.data.repository.ProjectsDataStore
 import com.pedroroig.data.store.ProjectsDataStoreFactory
-import io.reactivex.Completable
-import io.reactivex.Observable
-import io.reactivex.Single
+import io.reactivex.rxjava3.core.Completable
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.core.Single
 import org.junit.Before
 import org.junit.Test
 import org.mockito.ArgumentMatchers.anyBoolean

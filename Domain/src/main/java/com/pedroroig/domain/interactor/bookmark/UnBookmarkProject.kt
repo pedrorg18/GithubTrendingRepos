@@ -3,7 +3,7 @@ package com.pedroroig.domain.interactor.bookmark
 import com.pedroroig.domain.executor.PostExecutionThread
 import com.pedroroig.domain.interactor.CompletableUseCase
 import com.pedroroig.domain.repository.ProjectsRepository
-import io.reactivex.Completable
+import io.reactivex.rxjava3.core.Completable
 import javax.inject.Inject
 
 open class UnBookmarkProject @Inject constructor(

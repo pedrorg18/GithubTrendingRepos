@@ -3,15 +3,13 @@ package com.pedroroig.presentation
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.pedroroig.domain.interactor.bookmark.BookmarkProject
 import com.pedroroig.domain.interactor.bookmark.GetBookmarkedProjects
-import com.pedroroig.domain.interactor.bookmark.UnBookmarkProject
 import com.pedroroig.domain.model.Project
 import com.pedroroig.presentation.mapper.ViewMapper
 import com.pedroroig.presentation.model.ProjectView
 import com.pedroroig.presentation.state.Resource
 import com.pedroroig.presentation.state.ResourceState
-import io.reactivex.observers.DisposableObserver
+import io.reactivex.rxjava3.observers.DisposableObserver
 import javax.inject.Inject
 
 class BrowseBookmarkedProjectsViewModel @Inject constructor(

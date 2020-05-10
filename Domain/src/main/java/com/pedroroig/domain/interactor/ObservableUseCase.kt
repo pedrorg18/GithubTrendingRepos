@@ -1,11 +1,11 @@
 package com.pedroroig.domain.interactor
 
 import com.pedroroig.domain.executor.PostExecutionThread
-import io.reactivex.Observable
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.disposables.Disposable
-import io.reactivex.observers.DisposableObserver
-import io.reactivex.schedulers.Schedulers
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.disposables.CompositeDisposable
+import io.reactivex.rxjava3.disposables.Disposable
+import io.reactivex.rxjava3.observers.DisposableObserver
+import io.reactivex.rxjava3.schedulers.Schedulers
 
 abstract class ObservableUseCase<T, in Params>(
     private val postExecutionThread: PostExecutionThread

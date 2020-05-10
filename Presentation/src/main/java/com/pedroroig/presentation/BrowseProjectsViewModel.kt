@@ -11,8 +11,8 @@ import com.pedroroig.presentation.mapper.ViewMapper
 import com.pedroroig.presentation.model.ProjectView
 import com.pedroroig.presentation.state.Resource
 import com.pedroroig.presentation.state.ResourceState
-import io.reactivex.observers.DisposableCompletableObserver
-import io.reactivex.observers.DisposableObserver
+import io.reactivex.rxjava3.observers.DisposableCompletableObserver
+import io.reactivex.rxjava3.observers.DisposableObserver
 import javax.inject.Inject
 
 class BrowseProjectsViewModel @Inject constructor(

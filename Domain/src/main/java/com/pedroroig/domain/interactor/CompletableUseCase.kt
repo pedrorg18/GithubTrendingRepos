@@ -1,11 +1,11 @@
 package com.pedroroig.domain.interactor
 
 import com.pedroroig.domain.executor.PostExecutionThread
-import io.reactivex.Completable
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.disposables.Disposable
-import io.reactivex.observers.DisposableCompletableObserver
-import io.reactivex.schedulers.Schedulers
+import io.reactivex.rxjava3.core.Completable
+import io.reactivex.rxjava3.disposables.CompositeDisposable
+import io.reactivex.rxjava3.disposables.Disposable
+import io.reactivex.rxjava3.observers.DisposableCompletableObserver
+import io.reactivex.rxjava3.schedulers.Schedulers
 
 abstract class CompletableUseCase<in Params>(
     private val postExecutionThread: PostExecutionThread

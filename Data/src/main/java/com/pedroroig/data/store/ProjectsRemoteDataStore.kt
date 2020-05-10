@@ -3,8 +3,8 @@ package com.pedroroig.data.store
 import com.pedroroig.data.model.ProjectEntity
 import com.pedroroig.data.repository.ProjectsDataStore
 import com.pedroroig.data.repository.ProjectsRemote
-import io.reactivex.Completable
-import io.reactivex.Observable
+import io.reactivex.rxjava3.core.Completable
+import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 
 open class ProjectsRemoteDataStore @Inject constructor(private val projectsRemote: ProjectsRemote)

@@ -5,7 +5,7 @@ import com.pedroroig.domain.executor.PostExecutionThread
 import com.pedroroig.domain.model.Project
 import com.pedroroig.domain.repository.ProjectsRepository
 import com.pedroroig.domain.test.makeProjectList
-import io.reactivex.Observable
+import io.reactivex.rxjava3.core.Observable
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock

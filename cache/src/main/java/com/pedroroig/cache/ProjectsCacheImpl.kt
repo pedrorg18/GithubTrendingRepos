@@ -5,9 +5,10 @@ import com.pedroroig.cache.mapper.CachedProjectMapper
 import com.pedroroig.cache.model.Config
 import com.pedroroig.data.model.ProjectEntity
 import com.pedroroig.data.repository.ProjectsCache
-import io.reactivex.Completable
-import io.reactivex.Observable
-import io.reactivex.Single
+import hu.akarnokd.rxjava3.bridge.RxJavaBridge
+import io.reactivex.rxjava3.core.Completable
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.core.Single
 import javax.inject.Inject
 
 class ProjectsCacheImpl @Inject constructor(
@@ -32,7 +33,9 @@ class ProjectsCacheImpl @Inject constructor(
         }
 
     override fun getProjects(): Observable<List<ProjectEntity>> =
-        projectsDatabase.cachedProjectsDao().getProjects()
+        RxJavaBridge.toV3Flowable(
+            projectsDatabase.cachedProjectsDao().getProjects()
+        )
             .toObservable()
             .map { list ->
                 list.map {
@@ -41,7 +44,9 @@ class ProjectsCacheImpl @Inject constructor(
             }
 
     override fun getBookmarkedProjects(): Observable<List<ProjectEntity>> =
-        projectsDatabase.cachedProjectsDao().getBookmarkedProjects()
+        RxJavaBridge.toV3Flowable(
+            projectsDatabase.cachedProjectsDao().getBookmarkedProjects()
+        )
             .toObservable()
             .map { list ->
                 list.map {
@@ -62,7 +67,9 @@ class ProjectsCacheImpl @Inject constructor(
         }
 
     override fun areProjectsCached(): Single<Boolean> =
-        projectsDatabase.cachedProjectsDao().getProjects().isEmpty
+        RxJavaBridge.toV3Flowable(
+            projectsDatabase.cachedProjectsDao().getProjects()
+        ).isEmpty
             .map {
                 !it
             }
@@ -78,8 +85,10 @@ class ProjectsCacheImpl @Inject constructor(
     override fun isProjectsCacheExpired(): Single<Boolean> {
         val currentTime = System.currentTimeMillis()
         val expirationTime = (60 * 10 * 1000).toLong()
-        return projectsDatabase.configDao().getConfig()
-            .toSingle(Config(lastCacheTime = 0))
+        return RxJavaBridge.toV3Maybe(
+            projectsDatabase.configDao().getConfig()
+        )
+            .switchIfEmpty(Single.just(Config(lastCacheTime = 0)))
             .map {
                 currentTime - it.lastCacheTime > expirationTime
             }

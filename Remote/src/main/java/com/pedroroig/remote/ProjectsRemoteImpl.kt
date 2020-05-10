@@ -4,7 +4,7 @@ import com.pedroroig.data.model.ProjectEntity
 import com.pedroroig.data.repository.ProjectsRemote
 import com.pedroroig.remote.mapper.ProjectsResponseModelMapper
 import com.pedroroig.remote.service.GithubTrendingService
-import io.reactivex.Observable
+import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 
 class ProjectsRemoteImpl @Inject constructor(

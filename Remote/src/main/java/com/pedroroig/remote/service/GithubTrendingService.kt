@@ -1,7 +1,7 @@
 package com.pedroroig.remote.service
 
 import com.pedroroig.remote.model.ProjectsResponseModel
-import io.reactivex.Observable
+import io.reactivex.rxjava3.core.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query
 

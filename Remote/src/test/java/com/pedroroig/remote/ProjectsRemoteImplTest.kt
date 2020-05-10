@@ -10,7 +10,7 @@ import com.pedroroig.remote.model.ProjectModel
 import com.pedroroig.remote.model.ProjectsResponseModel
 import com.pedroroig.remote.service.GithubTrendingService
 import com.pedroroig.remote.test.factory.ProjectDataFactory
-import io.reactivex.Observable
+import io.reactivex.rxjava3.core.Observable
 import org.junit.Before
 import org.junit.Test
 

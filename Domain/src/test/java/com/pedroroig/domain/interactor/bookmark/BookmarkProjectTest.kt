@@ -4,7 +4,7 @@ import com.nhaarman.mockito_kotlin.whenever
 import com.pedroroig.domain.executor.PostExecutionThread
 import com.pedroroig.domain.repository.ProjectsRepository
 import com.pedroroig.domain.test.randomUuId
-import io.reactivex.Completable
+import io.reactivex.rxjava3.core.Completable
 import org.junit.Before
 import org.junit.Test
 import org.mockito.ArgumentMatchers.anyString

@@ -35,6 +35,7 @@ dependencies {
     implementation cacheDependencies.rxKotlin
     implementation cacheDependencies.roomRuntime
     implementation cacheDependencies.roomRxJava
+    implementation "com.github.akarnokd:rxjava3-bridge:3.0.0"
     kapt cacheDependencies.roomCompiler
 
     testImplementation cacheTestDependencies.junit

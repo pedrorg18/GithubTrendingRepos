@@ -4,7 +4,7 @@ import com.pedroroig.domain.executor.PostExecutionThread
 import com.pedroroig.domain.interactor.ObservableUseCase
 import com.pedroroig.domain.model.Project
 import com.pedroroig.domain.repository.ProjectsRepository
-import io.reactivex.Observable
+import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 
 open class GetProjects @Inject constructor(

@@ -9,7 +9,7 @@ import com.pedroroig.presentation.model.ProjectView
 import com.pedroroig.presentation.state.ResourceState
 import com.pedroroig.presentation.test.factory.DataFactory
 import com.pedroroig.presentation.test.factory.ProjectFactory
-import io.reactivex.observers.DisposableObserver
+import io.reactivex.rxjava3.observers.DisposableObserver
 import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
