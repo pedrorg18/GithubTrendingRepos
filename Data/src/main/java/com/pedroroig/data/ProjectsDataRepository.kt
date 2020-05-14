@@ -26,6 +26,7 @@ class ProjectsDataRepository @Inject constructor(
         )
             .flatMap {
                 factory.getDataStore(it.first, it.second).getProjects()
+                    .distinctUntilChanged()
             }
             .flatMap { projects ->
                 factory.getCacheDataStore()

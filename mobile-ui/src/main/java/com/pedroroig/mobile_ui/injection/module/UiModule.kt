@@ -3,6 +3,7 @@ package com.pedroroig.mobile_ui.injection.module
 import com.pedroroig.domain.executor.PostExecutionThread
 import com.pedroroig.mobile_ui.browse.BrowseActivity
 import com.pedroroig.mobile_ui.UiThread
+import com.pedroroig.mobile_ui.bookmarked.BookmarkedActivity
 import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -15,4 +16,7 @@ abstract class UiModule {
 
     @ContributesAndroidInjector
     abstract fun contributesBrowseActivity(): BrowseActivity
+
+    @ContributesAndroidInjector
+    abstract fun contributesBookmarkedActivity(): BookmarkedActivity
 }

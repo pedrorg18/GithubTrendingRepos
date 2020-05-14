@@ -62,6 +62,7 @@ class BrowseProjectsViewModel @Inject constructor(
         }
 
         override fun onError(e: Throwable) {
+            e.printStackTrace()
             liveData.value = Resource(
                 ResourceState.Error,
                 null,

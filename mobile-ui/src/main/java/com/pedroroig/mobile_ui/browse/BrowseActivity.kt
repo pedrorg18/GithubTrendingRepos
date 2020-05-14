@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -40,7 +41,7 @@ class BrowseActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         browseViewModel.getProjects().observe(this,
-            Observer<Resource<List<ProjectView>>> {
+            Observer {
                 it?.let {
                     handleDataState(it)
                 }
@@ -72,11 +73,18 @@ class BrowseActivity : AppCompatActivity() {
     private fun handleDataState(resource: Resource<List<ProjectView>>) {
         when (resource.status) {
             ResourceState.Success -> {
+                progress.visibility = View.GONE
+                recycler_projects.visibility = View.VISIBLE
                 setupScreenForSuccess(resource.data)
             }
             ResourceState.Loading -> {
                 progress.visibility = View.VISIBLE
                 recycler_projects.visibility = View.GONE
+            }
+            ResourceState.Error -> {
+                progress.visibility = View.GONE
+                recycler_projects.visibility = View.VISIBLE
+                Toast.makeText(this, resource.message, Toast.LENGTH_LONG).show()
             }
         }
     }

@@ -3,7 +3,6 @@ package com.pedroroig.mobile_ui.bookmarked
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.MenuItem
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -12,7 +11,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pedroroig.mobile_ui.R
-import com.pedroroig.mobile_ui.browse.BrowseActivity
 import com.pedroroig.mobile_ui.injection.ViewModelFactory
 import com.pedroroig.presentation.BrowseBookmarkedProjectsViewModel
 import com.pedroroig.presentation.model.ProjectView
@@ -27,15 +25,15 @@ class BookmarkedActivity : AppCompatActivity() {
     @Inject lateinit var adapter: BookmarkedAdapter
 //    @Inject lateinit var mapper: ViewMapper
     @Inject lateinit var viewModelFactory: ViewModelFactory
-    @Inject lateinit var browseViewModel: BrowseBookmarkedProjectsViewModel
+    private lateinit var browseViewModel: BrowseBookmarkedProjectsViewModel
 
     companion object {
         fun getStartIntent(ctx: Context) =
-            Intent(ctx, BrowseActivity::class.java)
+            Intent(ctx, BookmarkedActivity::class.java)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bookmarked)
         AndroidInjection.inject(this)
 
