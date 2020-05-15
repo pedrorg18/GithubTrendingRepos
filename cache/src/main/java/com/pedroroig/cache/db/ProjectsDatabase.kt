@@ -21,7 +21,7 @@ abstract class ProjectsDatabase @Inject constructor() : RoomDatabase() {
         private var INSTANCE: ProjectsDatabase? = null
         private val lock = Any()
 
-        fun getInstances(ctx: Context): ProjectsDatabase {
+        fun getInstance(ctx: Context): ProjectsDatabase {
             if (INSTANCE == null) {
                 synchronized(lock) {
                     if (INSTANCE == null) {

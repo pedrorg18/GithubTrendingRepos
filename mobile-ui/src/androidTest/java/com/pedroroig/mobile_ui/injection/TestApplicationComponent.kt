@@ -1,8 +1,9 @@
 package com.pedroroig.mobile_ui.injection
 
 import android.app.Application
-import com.pedroroig.mobile_ui.GitHubTrendingApplication
-import com.pedroroig.mobile_ui.injection.module.*
+import com.pedroroig.domain.repository.ProjectsRepository
+import com.pedroroig.mobile_ui.injection.module.PresentationModule
+import com.pedroroig.mobile_ui.injection.module.UiModule
 import com.pedroroig.mobile_ui.test.TestApplication
 import dagger.BindsInstance
 import dagger.Component
@@ -22,6 +23,8 @@ import javax.inject.Singleton
     ]
 )
 interface TestApplicationComponent {
+
+    fun projectsRepository(): ProjectsRepository
 
     @Component.Builder
     interface Builder {

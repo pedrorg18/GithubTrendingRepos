@@ -16,7 +16,7 @@ abstract class CacheModule {
         @Provides
         @JvmStatic
         fun providesDataBase(app: Application): ProjectsDatabase =
-            ProjectsDatabase.getInstances(app)
+            ProjectsDatabase.getInstance(app)
     }
 
     @Binds

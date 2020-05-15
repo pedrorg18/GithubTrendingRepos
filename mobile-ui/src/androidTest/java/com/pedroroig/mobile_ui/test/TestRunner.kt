@@ -11,9 +11,7 @@ class TestRunner : AndroidJUnitRunner() {
 
     override fun onCreate(arguments: Bundle?) {
         super.onCreate(arguments)
-        RxJavaPlugins.setInitIoSchedulerHandler {
-            Schedulers.trampoline()
-        }
+        RxJavaPlugins.setIoSchedulerHandler { Schedulers.trampoline() }
     }
 
     override fun newApplication(
